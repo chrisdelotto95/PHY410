@@ -1,3 +1,2 @@
-Homework1 goes here
-
-i am in the window
+A) 10
+(1x2) + (0x1) = 2
