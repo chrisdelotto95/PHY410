@@ -10,7 +10,7 @@ int main()
   float  x1,x2,y1,y2,midpoint1,midpoint2,slope,top,bottom,intercept,perp_line_slope,y_inter_perp;
 
 
-  cout << "This program will calculate the Midpoint & Slope of a line." << endl<<endl;
+  cout << "This program will calculate the Midpoint, Slope of a line,y-intercept,line function, & perpendicular line." << endl<<endl;
 
   cout << "Please input the value of the first point, x1 & y1 with a space in between: ";
   cin >> x1 >> y1;
