@@ -1,0 +1,356 @@
+<html><head>
+<META NAME="Author" CONTENT="Jonathan Byrd">
+<title>Editing Text with EMACS</title>
+</head>
+
+<body>
+
+<a href="job.html"><img
+src="http://www.isu.edu/pics/buttons/previous.gif" alt="previous
+section"></a> &nbsp <a href="environment.html"><img
+src="http://www.isu.edu/pics/buttons/next.gif" alt="next section"></a>
+&nbsp <a href="index.html"><img
+src="http://www.isu.edu/pics/buttons/up.gif" alt="upper level"></a>
+
+<hr>
+
+<h2>Section 10: Editing Text with EMACS</h2>
+
+One of the most basic operations you will need to perform on a Unix
+system is text editing.  Whether you are preparing a document, writing
+a program, or sending email to a colleague, you will need a utility to
+allow you to enter and edit text.
+
+<p>
+
+There are many editors available for Unix systems, but this discussion
+will focus on the <b>emacs</b> text editing program because of its
+power, flexibility, extensibility, customizability, and prevalence.
+No matter where you get a Unix account, you are likely to have emacs
+at your disposal.
+
+Here is an index to the topics in this section:
+
+<ul>
+
+  <li><a href=#general> General features</a></li>
+
+  <li><a href=#buffers> Working with buffers</a></li>
+
+  <li><a href=#basicops> Starting, quitting, and getting help</a></li>
+
+  <li><a href=#display> The emacs display</a></li>
+
+  <li><a href=#files> Working with files</a></li>
+
+  <li><a href=#cursor> Cursor motion</a></li>
+
+  <li><a href=#insert> Inserting and deleting text</a></li>
+
+  <li><a href=#paste> Cutting and pasting text regions</a></li>
+
+  <li><a href=#custom> Customizing Emacs</a></li>
+
+</ul>
+
+<a name="general">
+<h3> General features of the emacs editor</h3>
+</a>
+
+Emacs is a visual editor.  That means that you have a representation
+of your entire document on your screen, and you can move around
+freely, editing any part of the document you wish.  Older editors,
+referred to as <i>line editors</i>, required all changes to the file
+to be made on a line-by-line basis.  Each command to a line editor
+specified a line number, and the changes to be applied to that line.
+Line editors are truly horrible things, and you should feel lucky if
+you have never seen one.
+
+<p>
+
+Emacs uses control and escape characters to distinguish editor
+commands from text to be inserted in the buffer.  In this document,
+the notation "Control-X" means to hold down the control key, and
+type the letter x.  You don't need to capitalize the x, or any other
+control character, by holding down the shift key.  "ESCAPE-X" means
+to press the escape key down, release it, and then type x.
+
+<a name="buffers">
+<h3>Working with buffers</h3>
+</a>
+
+When you edit a file in emacs, you're not really editing the file
+itself, as it sits out on a disk somewhere.  Instead, emacs makes a
+copy of the file, and stores the copy in a part of RAM memory called a
+<i>buffer</i>.  All the changes you make to the file are applied to the
+buffer.  When you save the file, emacs writes the contents of the
+buffer to the disk.
+
+<p>
+
+Because the buffer exists in RAM memory, it disappears if the power is
+turned off, or if the system crashes.  Thus, you should use the save
+command often, flushing your current buffer to disk.  Once the file is
+on disk, a power outage or system crash shouldn't harm it.
+
+<a name="basicops">
+<h3>Basic operations in emacs</h3>
+</a>
+
+Here are some of the fundamental things you'll need to do when you
+edit a document in emacs.
+
+<h4>Starting emacs</h4>
+
+To start emacs, just type the command <dl><dd><tt>emacs</tt></dl> to
+the Unix shell.  If you want emacs to start with a file already loaded
+into a buffer, type <dl><dd><tt>emacs filename </tt></dl> where
+"filename" is the name of the file you want to edit.
+
+<h4>Quitting emacs</h4>
+
+To exit emacs and return to the Unix shell, type Control-X-Control-C.
+If you have made changes to the buffer since the last time you saved
+it to disk, emacs will ask you if you want to save.  Type y for yes,
+or n for no.
+
+<h4>Getting help</h4>
+
+Emacs has an on-line help system that can be invoked by typing
+Control-H.  If you type the question mark (?), emacs will present a
+list of help topics you can choose.
+
+<a name="display">
+<h3>The emacs display</h3>
+</a>
+
+The display in emacs is divided into three basic areas.  The top area
+is called the <i>text window</i>.  The text window takes up most of
+the screen, and is where the document being edited appears.  At the
+bottom of the text window, there is a single <i>mode line</i>.  The
+mode line gives information about the document, and about the emacs
+session.  The bottom line of the emacs display is called the
+<i>mini buffer</i>.  The mini buffer holds space for commands that you
+give to emacs, and displays status information.
+
+<h4>Aborting a command</h4>
+
+You can abort an emacs control or escape sequence by typing the
+command Control-G.
+
+<a name="files">
+<h3>Working with files</h3>
+</a>
+
+To read a disk file into an emacs buffer, type the command
+Control-X-Control-F.  Emacs will ask you for the name of the file.  As
+you type the name of the file, it will be displayed in the mini buffer.
+When you have entered the file name, press the return key, and emacs
+will load the file into a buffer, and display it in the text window.
+
+<p> The command to save the contents of the buffer to a disk file is
+Control-X-Control-S.  The save command overwrites the old version of
+the file.  You may also write the contents of the buffer to a
+different file with the command Control-X-Control-W.  Emacs will
+prompt you for the name of the file you want to create.
+
+<p>
+
+To create a new file, use Control-X-Control-F, just as if the file
+already existed.  When emacs asks you for the file name, type in the
+name you want your new file to have, and emacs will create the file,
+and display an empty buffer for you to type in.
+
+<p>
+
+Emacs will perform file name completion for you.  Type part of the
+name of the file you want, and press the spacebar or tab key to get
+emacs to complete a file name.  If the partial name you've given
+matches more than one file, emacs will display a list of all potential
+matches.  You can continue typing in more of the file's name, and
+pressing either file completion key, until you zero in on the file you
+want.
+
+<a name="cursor">
+<h3>Cursor motion</h3>
+</a>
+
+On well-configured systems, you will find that the keyboard arrow keys
+will function correctly in emacs, moving you forward or backward one
+character at a time, and up or down one line at a time.  If the arrow
+keys do not work, here's how to accomplish the same functions:
+
+<ul>
+
+<li> Control-F moves the cursor forward to the next character.
+
+<li> Control-B moves the cursor back to the previous character.
+
+<li> Control-N moves the cursor to the next line.
+
+<li> Control-P moves the cursor to the previous line.
+
+</ul>
+
+<p>
+
+In addition to basic cursor motion, emacs provides some other handy
+cursor motion functions:
+
+<ul>
+
+<li> Control-A moves the cursor to the start of the current line.
+
+<li> Control-E  moves the cursor to the end of the current line.
+
+<li> ESCAPE-F  moves the cursor forward to the next word.
+
+<li> ESCAPE-B  moves the cursor back to the previous word.
+
+<li> ESCAPE-&lt  moves the cursor to the start of the buffer.
+
+<li> ESCAPE-&gt  moves the cursor to the end of the buffer.
+
+</ul>
+
+<a name="insert">
+<h3>Inserting and deleting text</h3>
+</a>
+
+To insert text into a buffer, place the cursor where you want to start
+inserting text, and start typing away.
+
+<p>
+
+If you want to insert the contents of another file into the current
+buffer, place the cursor at the desired insertion point, and type
+Control-X-I.  Emacs will ask you for the name of the file you wish to
+insert.
+
+<p>
+
+You may also insert text by cutting it from one place, and pasting it
+at the insertion point.  See the next section for information on
+cutting and pasting.
+
+<p>
+
+Deleting text is easy.  As you'd expect, the delete key deletes
+backward one character.  Here are some other ways to delete text:
+
+<ul>
+
+<li> Control-D deletes forward one letter.
+
+<li> Control-K deletes from the point to the end of the line.
+
+<li> ESCAPE-D deletes forward one word.
+
+<li> ESCAPE-delete deletes backward one word.
+
+</ul>
+
+<a name="paste">
+<h3>Cutting and pasting text regions</h3>
+</a>
+
+Emacs allows you to select a region of text, and perform cut and paste
+operations on the region.  It uses a temporary storage area called the
+"kill buffer" to allow you to store and retrieve blocks of text.
+There is only one kill buffer in emacs, which means that you can cut
+text from one document, and paste it into another.
+
+<p>
+
+To define a region of text, place the cursor at one end of the region
+and press Control-spacebar.  That sets the mark.  Then, move the
+cursor to the other end of the region.  The text between the mark and
+the cursor defines the region.
+
+<p>
+
+To cut a region of text, and place it in the kill buffer, use the
+command Control-W (think of <b>W</b>ipe).
+
+<p>
+
+The paste command is Control-Y.  It <b>Y</b>anks the block of text
+from the kill buffer, and places it where the cursor rests.  The
+Control-Y command only retrieves the most recently-cut block of text.
+
+<p>
+
+You can paste in earlier cuts by pressing ESCAPE-Y.  The ESCAPE-Y
+command, used repeatedly, will take you back through several previous
+text blocks that were cut.  The ESCAPE-Y command does not work unless
+you type Control-Y first.
+
+<p>
+
+You may copy a region of text into the kill buffer without cutting it.
+Define the text block by setting the mark at one end, and moving the
+cursor to the other end.  Then type ESCAPE-W.
+
+<h3>Undoing changes</h3>
+
+It is possible to undo the changes you have made to a file by entering
+the command Control-_. (That's Control-underscore.  On some keyboards,
+you'll have to hold down both the control and shift keys to enter the
+underscore character.)
+
+<p>
+
+Many word processing programs can only undo the most recent command,
+but emacs remembers a long history of commands, allowing you to undo
+many changes by repeatedly entering the Control-_ code.
+
+<p>
+
+<a name="custom">
+<h3>Customizing Emacs</h3>
+</a>
+
+The emacs editor is customizable in several ways.  You can set up your
+own key bindings, create your own macros, and even create your own
+custom functions.  Also, some aspects of the behavior of emacs is
+controlled by variables that you can set.
+
+<p>
+
+You can learn more about emacs functions by invoking the online help
+facility (by typing ESC-X help) and then typing the "f" key to list
+functions.  Pressing the space bar for completion will cause emacs to
+list all the built-in functions.  A list of variables can be similarly
+obtained by invoking the online help, then typing "v" then the
+spacebar.
+
+<p>
+
+If you place variable settings, key bindings, and function
+declarations, in a text file called ".emacs" in your home directory,
+The emacs editor will load those definitions at startup time.  Here is
+an <a href="emacs-keys.txt">emacs configuration file</a> with some
+basic variable definitions and key bindings for you to peruse.
+
+<p>
+<hr>
+
+<a href="job.html"><img
+src="http://www.isu.edu/pics/buttons/previous.gif" alt="previous
+section"></a> &nbsp <a href="environment.html"><img
+src="http://www.isu.edu/pics/buttons/next.gif" alt="next section"></a>
+&nbsp <a href="index.html"><img
+src="http://www.isu.edu/pics/buttons/up.gif" alt="upper level"></a>
+
+</body>
+</html>
+
+Ü€›V2      X ¤+X ¤,=n‘W\4£O   >    :https://fsl.fmrib.ox.ac.uk/fslcourse/unix_intro/textedit.html necko:classified 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAQAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8F+O2DZM7ZTG6GukivU8OT5gAAAAAAAASIMIIEhDCCA2ygAwIBAgIIS1TRsMa7xkUwDQYJKoZIhvcNAQELBQAwQzELMAkGA1UEBhMCVVMxGDAWBgNVBAoMD1RyZW5kIE1pY3JvIEluYzEaMBgGA1UEAwwRVHJlbmQgTWljcm8gUzIgQ0EwHhcNMTUwNzAyMTUyNzA1WhcNMTcwNzAyMTUyNzA1WjBwMQswCQYDVQQGEwJHQjEUMBIGA1UECAwLT3hmb3Jkc2hpcmUxDzANBgNVBAcMBk94Zm9yZDEdMBsGA1UECgwUVW5pdmVyc2l0eSBvZiBPeGZvcmQxGzAZBgNVBAMMEmZzbC5mbXJpYi5veC5hYy51azCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANGbY+lyFd+Cs2rBrbaPCqJzZKA+EPC/kz1oIvDkROGy49FnpTI0L4NyaK9Ois6qEK/alj77Fc4qBeUER4O0N4zidAFk8Vm3fpEnbRttvqwdqk0G8tpcfOR26WDOklY8VsZzZhSkz8AoJs5sElkcEX15fSNovRFL/wu46S62PqeRMqitNeReu/6MVmk7Mf7BVwXRufnMs7MOOKFCVOyz54BQcuOlbDvg/1DXfBF9sV8xaYUalODatt6aE+QoAc7PhWbhdRffxx4/ZhMLTe0w/PCH8PHRv7789ZFVynmOm/dIz43ApgBEiDLLtre0eISkk3B664lUWf03WMSxmc1ExQMCAwEAAaOCAU0wggFJMHAGCCsGAQUFBwEBBGQwYjAxBggrBgEFBQcwAoYlaHR0cDovL29jc3AudHJlbmRtaWNyby5jb20vdG1zMmNhLmNydDAtBggrBgEFBQcwAYYhaHR0cDovL29jc3AudHJlbmRtaWNyby5jb20vdG1zMmNhMB0GA1UdDgQWBBS9Kwe8tsw3eW4+b5qY5yrsxTy6BzAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFLCZ4ZBO82VjKJwSP3hWuoTAxzo9MDkGA1UdHwQyMDAwLqAsoCqGKGh0dHA6Ly9jcmwudHJlbmRtaWNyby5jb20vY3JsL3RtczJjYS5jcmwwDgYDVR0PAQH/BAQDAgOoMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAdBgNVHREEFjAUghJmc2wuZm1yaWIub3guYWMudWswDQYJKoZIhvcNAQELBQADggEBAHieIO5+M0ReJ2HpespD9qa1nGPiBThtGLYKLfjfx06kj6PPVWtKlE1bOyaMIUW24PjrDyYNyOLuF/pE8aKgyPM3UpRBVdRjM51dmF187C2VcP4KZKpKeuSXgBxvuE4zlqWA2jsOCxTIbLBa8Z7bKGnxRehjbNXtmwehjnPZh4VBrHt6gvVy62Rvn8HNr2WOj02NRDmBeGQRAw8gCSsuKfFWtYoi9WxoUNxPN5kizNOex7/CjNiQ5YxNU6sQsdSMmPlL2MXp+Vg5ADrGaI765XkmPg5Q4/3WcQT+d0X1nNKHqLUqqy5t/cHV1xoWoIPt7p0WvvcNNd57p0+a5idfClbALwADAAAAAAEBAAA= request-method GET response-head HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2017 18:06:36 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 mod_wsgi/3.4 Python/2.7.5
+Last-Modified: Wed, 04 Feb 1998 18:00:28 GMT
+Etag: "2c55-3265f31b7a700"
+Accept-Ranges: bytes
+Content-Length: 11349
+Content-Type: text/html; charset=UTF-8
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 3 predictor::http://www.isu.edu/pics/buttons/previous.gif 1,1,1486922795,0 predictor::http://www.isu.edu/pics/buttons/next.gif 1,1,1486922795,0 predictor::http://www.isu.edu/pics/buttons/up.gif 1,1,1486922795,0   ,U

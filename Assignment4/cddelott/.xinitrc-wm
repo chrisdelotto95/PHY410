@@ -1,0 +1,23 @@
+:
+# Sample .xinitrc file. This file is used when one starts up X on a workstation.
+# It can be customized to your own preference for screen layout.
+
+xterm -sb -fn *courier-bold-r-normal--14-140-* -geometry 80x7+0+0 +ut -C -n Console -title "Console @ $HOST" &
+
+xterm -sb -fn *courier-bold-r-normal--14-140-* -geometry 80x30+199+266 +ut -n $HOST -title $HOST &
+
+
+# put the clock in the bottom right side of the screen
+#xclock  -geometry 160x160-0-90 -update 1 -chime &
+
+
+# The machine load goes right below the clock
+xload  -geometry 160x90-0-0 -update 2 -highlight white &
+
+#NOTE: when you use the exit option from twm X WILL exit.
+twm
+# If this file was executed on an X Terminal, then the following line
+# will kill all the above jobs too
+kill 0
+
+

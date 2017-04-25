@@ -1,0 +1,392 @@
+<HTML>
+<HEAD>
+<TITLE>
+Basic Emacs Editor Commands
+</TITLE>
+</HEAD>
+
+<BODY BACKGROUND="Figures/csucs.gif"
+        TEXT="#000000" VLINK="#0000a0"
+        LINK="#0000ff" ALINK="#ff0000" BGCOLOR="#c0c0ff">
+         
+<TABLE WIDTH=98%>
+<TD ALIGN=LEFT>
+<IMG SRC="Figures/csbanner7.gif"
+      ALT="Colorado State University ">
+<TD ALIGN=RIGHT>
+<H1 ALIGN=RIGHT> <FONT COLOR=NAVY>
+	Basic Emacs Editor Commands
+</FONT></H1>
+<TR>
+</TABLE>
+<HR NOSHADE COLOR=NAVY>
+<HR NOSHADE COLOR=NAVY>
+<H3>What is <TT>Emacs</TT>?</H3>
+<P>
+<DL>
+<DD> <TT>Emacs</TT> is another editor available in UNIX.  Like <TT>vi</TT>,
+<TT>emacs</TT> is a screen
+editor. Unlike <TT>vi</TT>, <TT>emacs</TT> is not an insertion mode editor, meaning that
+any character typed in <TT>emacs</TT> is automatically inserted into the file,
+<B>unless</B> it includes a command prefix.
+<P>
+<DD>Commands in <TT>emacs</TT> are either control characters (hold down the
+<TT>&lt;Ctrl&gt;</TT> key while typing another character) or are
+prefixed by one of a set of reserved characters:
+<TT>&lt;Esc&gt;</TT> or <TT>&lt;Ctrl&gt;-X</TT>. 
+The <TT>&lt;Esc&gt;</TT> key can be
+typed by itself (because it really is a character) and then followed
+by another character; 
+the <TT>&lt;Ctrl&gt;</TT> key must be held down while the next
+character is being typed. The conventions for describing these
+characters (since it takes too long to type out the whole thing) are
+<TT>ESC</TT> means <TT>&lt;Esc&gt;</TT> and <TT>C-</TT>
+means <TT>&lt;Ctrl&gt;</TT>.
+<P>
+<DD>One other distinction between <TT>emacs</TT> and <TT>vi</TT>
+is that <TT>emacs</TT> allows you to
+edit several files at once. The window for <TT>emacs</TT> can be divided into
+several windows, each of which contains a view into a buffer. Each
+buffer typically corresponds to a different file. Many of the commands
+listed below are for reading files into new buffers and moving between
+buffers.
+<P>
+<DD>To use <TT>emacs</TT> on a file, type 
+<PRE>
+        emacs filename
+</PRE>
+If the file named <TT>filename</TT>
+exists, then the first screen's worth of the file is displayed;
+if it doesn't exist, a help message is displayed. 
+<P>
+<DD>The easiest way to learn <TT>emacs</TT> is to start it up and go through the
+on-line tutorial. To access the on-line tutorial, type 
+<PRE>
+        ESC help-with-tutorial
+</PRE>
+immediately after you have started <TT>emacs</TT>. The tutorial directs you
+further in learning the basic commands. One notational point you
+should know is that the tutorial uses <TT>M-</TT> to mean <TT>ESC</TT>. 
+<P>
+<DD>To give you a head start, the following table lists the basic commands you
+need to know to use <TT>emacs</TT> to edit a file.  An asterisk (<TT>*</TT> or star)
+to the left of a command indicate it is one  to learn immediately.
+</DL>
+<P><HR NOSHADE COLOR=NAVY><P>
+<H4>Help Commands</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> *
+<TH ALIGN=LEFT><TT>C-h</TT>
+	<TD> <I><B>help-command</B>:
+		first character in lots of useful help commands</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-h t</TT>
+	<TD> <I><B> help-with-tutorial</B>:
+		command to run the tutorial</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-h i</TT>
+	<TD> <I><B>information</B>: 
+		describes most of the <TT>emacs</TT> commands
+		in <TT>man</TT> style pages</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-h k</TT>
+	<TD> <I><B>describe-key</B>: 
+		tells you what a particular key stroke does</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-h a</TT>
+	<TD> <I><B>command-apropos</B>: 
+		prompts for a string and 
+		<BR> &#160; then searches for all
+		<TT>emacs</TT> commands that contains that string</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>ESC ?</TT>
+	<TD> <I> also does <B>command-apropos</B></I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-h ?</TT>
+	<TD> <I><B>help-for-help</B>: 
+		describes how to use the help facilities</I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>File Reading and Writing Commands</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> *
+<TH ALIGN=LEFT><TT>C-x C-f</TT>
+	<TD> <I><B>find-file</B>: 
+		first prompts for a filename and
+		<BR> &#160; then loads
+		that file into a editor buffer of the same name</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-x C-s</TT>
+	<TD> <I><B>save-buffer</B>: 
+		saves the buffer into the associated filename</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT> C-x C-w</TT>
+	<TD> <I><B>write-named-file</B>:
+		prompts for a new filename and writes
+		the buffer into it</I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>Cursor/Screen Movement Commands</H4>
+<P>
+<DL>
+<DD>Depending on the terminal, some of the cursor movement can be handled
+by the arrow keys.
+</DL>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> *
+<TH ALIGN=LEFT><TT>C-a</TT>
+	<TD> <I>move cursor to (at) beginning-of-line</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-e</TT>
+	<TD> <I>move cursor to end-of-line</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT> C-f</TT>
+	<TD> <I>move cursor forward one character</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT> C-b</TT>
+	<TD> <I>move cursor backward one character</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT> C-n</TT>
+	<TD> <I>move cursor to next line</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT> C-p</TT>
+	<TD> <I>move cursor to previous line</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-v</TT>
+	<TD> <I> scroll file forward by one screenful</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>ESC v</TT>
+	<TD> <I> scroll file backward by one screenful</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>ESC &lt;</TT>
+	<TD> <I> go to beginning-of-buffer</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>ESC &gt;</TT>
+	<TD> <I> go to end-of-buffer</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>ESC f</TT>
+	<TD> <I> move cursor forward one word</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>ESC b</TT>
+	<TD> <I> move cursor backward one word</I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>Copy and Delete Commands</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-d</TT>
+	<TD> <I><B>delete-char</B>: 
+		delete character under cursor</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>ESC d</TT>
+	<TD> <I><B>delete-word</B>: 
+		delete from cursor to end of word immediately ahead of the
+		cursor</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-k</TT>
+	<TD> <I><B>kill-line</B>: 
+		delete the rest of the current line</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-@</TT>
+	<TD> <I><B>set-mark-command</B>: 
+		mark is used to indicate the beginning of
+		an area of text to be yanked</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-w</TT>
+	<TD> <I><B>kill-region</B>: 
+		delete the area of text between the mark and
+		the current cursor position</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-y</TT>
+	<TD> <I><B>yank</B>: 
+		insert at current cursor location whatever was most
+		recently deleted</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT> ESC w</TT>
+	<TD> <I><B>copy-region-as-kill</B>:
+		copy area between mark and cursor into kill-buffer
+		<BR> &#160; so that it can be yanked into someplace else</I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>Search Commands</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> *
+<TH ALIGN=LEFT><TT>C-s</TT>
+	<TD> <I><B>isearch-forward</B>: 
+		prompts for text string and
+		<BR> &#160; then searches
+		from the current cursor position forwards in the buffer</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-r</TT>
+	<TD> <I><B>isearch-backward</B>: 
+		like <B>isearch-forward</B>,
+		<BR> &#160; but searches from the current cursor
+		position to end of buffer for text string</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT> ESC %</TT>
+	<TD> <I><B>query-replace</B>:
+		prompts for a search string and 
+		<BR> &#160; a string
+		with which to replace the search string</I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>Window and Buffer Commands</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-x 0</TT>
+	<TD> <I><B>zero-window</B>: 
+		deletes current window</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-x 2</TT>
+	<TD> <I><B>double-window</B>: 
+		splits current window into two parts, 
+		<BR> &#160; allowing you to edit at
+		two different locations in the same file
+		<BR> &#160;  or permitting you to view two
+		different files at the same time</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-x b</TT>
+	<TD> <I><B>switch-to-buffer</B>: 
+		display a different buffer on the screen</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT>C-x o</TT>
+	<TD> <I><B>other-window</B>: 
+		move the cursor to the other window
+		<BR> &#160;  (assuming that you have
+		two windows/buffers open at once</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-x C-b</TT>
+	<TD> <I><B>list-buffers</B>: 
+		lists those buffers currently loaded into <TT>emacs</TT></I>
+<TR>
+</TABLE>
+</CENTER>
+<P>
+<H4>Exiting <TT>Emacs</TT>, Fixing Mistakes and Other Important Stuff</H4>
+<P>
+<CENTER>
+<TABLE BORDER>
+<TH> *
+<TH ALIGN=LEFT><TT>C-x C-c</TT>
+	<TD> <I><B>save-buffers-kill-emacs</B>: 
+		when you are finished editing,
+		<BR> &#160; to save the edited but unsaved buffers
+		<BR> &#160; and to return you to the UNIX prompt</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>C-g</TT>
+	<TD> <I><B>keyboard-quit</B>: 
+		if while typing a command you make a mistake
+		and want to stop,
+		<BR> &#160; this aborts a command in progress</I>
+<TR>
+<TH> &#160;
+<TH ALIGN=LEFT><TT> C-u</TT>
+	<TD> <I><B> universal-argument</B>:
+		if you want to do a command several times,
+		<BR> &#160; type this command
+		<BR> &#160; &#160; &#160;
+			followed by a number (for the number of times)
+		<BR> &#160; &#160; &#160;
+			followed by the command you wish repeated</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT> C-x u</TT>
+	<TD> <I><B> undo</B>:
+		undoes the last command typed, in case you made a mistake</I>
+<TR>
+<TH> *
+<TH ALIGN=LEFT><TT>ESC x</TT>
+	<TD> <I><B>execute-extended-command</B>: 
+		prompts for the name of an <TT>emacs</TT> command;
+		<BR> &#160; allows you to execute a command
+		<BR> &#160; &#160; &#160;
+			if you know roughly what it is called
+		<BR> &#160; &#160; &#160;
+			but cannot remember the key strokes for it</I>
+<TR>
+</TABLE>
+</CENTER>
+<P><HR NOSHADE COLOR=NAVY><P>
+<H3>Other <TT>Emacs</TT> Bindings</H3>
+<P>
+<DD><TT>Emacs</TT> has many other useful commands. As you get
+more proficient at it, try listing the key bindings (<TT>ESC-x</TT>
+for <I><B>describe-bindings</B></I>) to find
+other commands.  Also note that <TT>emacs</TT> has what is called
+<I><B>escape-completion</B></I>:
+as you type in commands or filenames,
+you can type a space at any time and <TT>emacs</TT> will either fill out the
+rest (if there is only one possible completion) or it will list the
+possible completions in a new window. 
+<P>
+<DD>A Web page with a complete list of 
+<A HREF="emacs-bindings"><B><TT>emacs</TT> bindings</B></A>
+is also available.
+<DL>
+<P><HR NOSHADE COLOR=NAVY>
+
+</BODY>
+</HTML>
+’(­Smõ      X ¤X ¤=n‘;XÒ²Á   1    :https://www.cs.colostate.edu/helpdocs/emacs.html necko:classified 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2017 18:05:55 GMT
+Server: Apache/2.2.15 (Red Hat)
+Last-Modified: Sat, 30 Jan 2016 01:23:32 GMT
+Etag: "176486-2883-52a82fff64d00"
+Accept-Ranges: bytes
+Content-Length: 10371
+Content-Type: text/html; charset=UTF-8
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 2 predictor::https://www.cs.colostate.edu/helpdocs/Figures/csbanner7.gif 1,1,1486922755,0 predictor::https://www.cs.colostate.edu/helpdocs/Figures/csucs.gif 1,1,1486922755,0   (ƒ

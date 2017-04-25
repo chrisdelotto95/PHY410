@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>MyUB - Your personal portal to the UB Web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/nav.css" type="text/css" />
+<link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/header.css" type="text/css" />
+<link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/application.css" type="text/css" />
+<link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/myub1.css" type="text/css" />
+<link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/myub_size_M.css" type="text/css" />
+<style type="text/css">
+
+.tabcolor {
+
+   background: #143C69;
+
+}
+
+
+
+
+.myub_active_tab {
+	background:url(https://myub.buffalo.edu/myub/images/active_tab.gif) repeat-x scroll 0 0 transparent;
+	text-decoration: bold;
+	text-align: center;
+	vertical-align: middle;
+    font: 17px DinWebRegular, "Trebuchet MS", Trebuchet, sans-serif;
+	text-align: center; 
+	vertical-align: center;
+}
+
+.horiz {
+	background-color: #0058B8;
+	height:50px;
+	border-bottom:1px solid #FFFFFF;
+}
+
+.myub_head {
+    background: #676767; /* Old browsers */
+    background: -moz-linear-gradient(top,  #B7B7B7 0%, #676767 25%, #676767 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#B7B7B7), color-stop(25%,#676767), color-stop(100%,#676767)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #B7B7B7 0%, #676767 25%,#676767 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #B7B7B7 0%, #676767 25%,#676767 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #B7B7B7 0%, #676767 25%,#676767 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #B7B7B7 0%, #676767 25%,#676767 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B7B7B7', endColorstr='#676767',GradientType=0 ); /* IE6-9 */
+}
+
+.tab_border {
+	border-top:1px solid #FFFFFF;
+	background:url("https://myub.buffalo.edu/myub/images/UB_Bar_Background.gif") repeat scroll 0 0 transparent;
+}
+
+#search-myub button {
+	background:url("https://myub.buffalo.edu/myub/images/search_icon.gif") no-repeat 3px 3px #FFFFFF;
+	border:0 none;
+	cursor:pointer;
+	height:20px;
+	padding:0;
+	right:1px;
+	top:1px;
+	width:20px;
+	float: left;
+	vertical-align:bottom;
+}
+
+input.type-submit {
+    background: url("https://myub.buffalo.edu/myub/images/search_icon.gif") no-repeat top left;
+    border: 0 none;
+    cursor: pointer;
+    height: 16px;
+    margin: 0;
+    width: 15px;
+    vertical-align: bottom;
+    padding: 4px;
+    opacity: .5;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}
+
+.searchtextbox  {
+	border: 1px solid;
+	border-color: #FFFFFF #FFFFFF #FFFFFF #FFFFFF;
+	background-color: #FFFFFF;
+	width: 16em;
+	float: left;
+	padding: 0 4px;
+}
+
+.searchtextbox:focus {
+    outline: none;
+}
+
+#search_box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    cursor: pointer;
+    float: right;
+    border: 1px solid #999;
+    padding: 2px;
+    border-radius: 4px;
+    position: relative;
+}
+
+</style>
+
+
+<!--[if gte IE 10]><!--><link rel="stylesheet" href="https://myub.buffalo.edu/myub/css/myub_rwd.css" type="text/css" /><!--<![endif]-->
+
+<script type="text/javascript" src="https://myub.buffalo.edu/myub/javascript/jquery.min.js"></script>
+<script type="text/javascript" src="https://myub.buffalo.edu/myub/javascript/appendAround.js"></script>
+<script type="text/javascript" src="https://myub.buffalo.edu/myub/javascript/main.js"></script>
+<script type="text/javascript">
+<!--
+function clearDefault(el) {
+if (el.defaultValue==el.value) el.value = ""
+}
+function checkSearchTerm(el) {
+if (el.value=="") el.value = "Search UB and the Directory"
+}
+// -->
+</script>
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-44565048-1', 'buffalo.edu');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'forceSSL', true);
+    ga('set', 'title', 'MyUB Home');
+    ga('set', 'dimension1', 'Applicant, Student');
+    ga('send', 'pageview');
+</script>
+<script type="text/javascript" src="https://myub.buffalo.edu/myub/javascript/ga.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+<!-- Hide from old browsers
+
+
+
+    if( top.location != location )
+      top.location.href = location.href;
+
+
+    function remote_window (url){
+      window.open(url,'_blank','toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=730,height=600');
+    }
+
+
+    function alert_add() {
+        return alert('This MyUB channel has been added to your MyPage.\n\nTip:  To remove channels later, use the "Change Content" feature or click the "X" icon on any MyPage channel.\n\nTip:  Alert messages like this one can be turned off by using MyUB\'s "Change Settings" feature.');
+    }
+
+
+//-->
+</script>
+
+</head>
+<body bgcolor="#FFFFFF"  class="mobile_links_menu_show">
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#809DC4" class="myub_head_container">
+<tbody>
+<tr>
+<td colspan="2" class="horiz ub_logo">
+<img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="12" height="28" alt="" class="spacer"/>
+<a href="http://www.buffalo.edu/reachingothers/"></a>
+<a href="http://www.buffalo.edu/">
+<img src="https://myub.buffalo.edu/myub/images/ub_single_line.png" alt="University at Buffalo, The State University of New York" border="0" />
+</a>
+</td>
+</tr>
+<tr class="myub_head" >
+<td valign="bottom">
+<table summary="format" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="16" class="spacer"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="16" height="65" alt="" /></td>
+<td width="68"><a href="/myub/pw/template/myub.html"><img class="myub_logo" src="https://myub.buffalo.edu/myub/images/MyUB_Logo_New_Grey.gif"  alt="MyUB Logo" border="0" /></a><br /></td>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="16"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="16" height="19" alt="" /></td>
+<td class="welcomemsgc"><span class="welcomemsgf">Hello Christopher</span><span class="weatherc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thursday, February  9</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+
+<td valign="top">
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align="right">
+<table summary="format" border="0" cellspacing="0" cellpadding="0" class="logout_help_search">
+<tbody>
+<tr>
+<td align="left" width="190" nowrap="nowrap"><p class="helplinksf"><span class="helplinksc"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://myub.buffalo.edu/acsgen_web/pw/scripts/acs_logoff.cgi?application=MyUB&amp;cid=1000&amp;rid=">> Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/myub/pw/template/myub.html?cid=1032">> Help</a>&nbsp;/&nbsp;<a href="/myub/pw/template/myub.html?cid=1032">Feedback</a></span></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<span style='white-space: nowrap'>
+<div id="search_box_container" data-set="mobile-search">
+<div id="search_box">
+<form id ="search-myub" name="search-myub" action="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://www.buffalo.edu/search/search.cgi&amp;cid=1000&amp;rid=" method="post" class="hdrsearch">
+<input class="searchtextbox" type="text" name="q" id="myubquery" value="Search UB and the Directory" onfocus="clearDefault(this)" onblur = "checkSearchTerm(this)"/>
+<input type="hidden" name="b" value="myubis" />
+<input type="hidden" name="ui" value="cddelott" />
+<input class="type-submit" title="Search MyUB" type="submit" value=" " />
+</form>
+</div>
+</div>
+</span>
+</td>
+<td width="30">
+&nbsp;
+</td>
+</tr>
+
+</tbody>
+</table>
+<div id="mobile_search_button" class="mobile_menu_button">
+    <a class="mobile_menu_button_inner" href="#">
+        <span class="menu_search_icon"></span>
+    </a>
+</div>
+<div id="mobile_links_menu_button" class="mobile_menu_button">
+    <a class="mobile_menu_button_inner" href="#"><span class="menu_dots"></span><span class="menu_dots"></span><span class="menu_dots"></span></a>
+</div>
+<div id="mobile_main_menu_button" class="mobile_menu_button">
+    <a class="mobile_menu_button_inner" href="#">
+        <span class="menu_bars"></span>
+        <span class="menu_bars"></span>
+        <span class="menu_bars"></span>
+    </a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="mobile_links_menu" class="mobile_menu">
+<table class="tab_border" summary="format" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#809DC4">
+<tbody>
+<tr>
+<td width="16" class="myub_tab spacer"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="16" height="27" alt="" /></td>
+
+
+<td width="100" height="27" valign="bottom" class="myub_active_tab tab_home"><a href="https://myub.buffalo.edu/myub/pw/template/myub.html?cid=1000">MyUB</a></td>
+<td width="100" height="27" valign="bottom" class="myub_tab tab_mypage"><div><a href="https://myub.buffalo.edu/myub/pw/template/myub.html?cid=9999">MyPage</a></div></td>
+
+<td width="100" height="27" valign="bottom" class="myub_tab tab_mail"><a onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ubmail.buffalo.edu');return false;" target="_blank" href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ubmail.buffalo.edu"><img src="https://myub.buffalo.edu/myub/images/rwd_icons/mail.png" alt=" "/>UBmail</a></td>
+<td width="100" height="27" valign="bottom" class="myub_tab tab_ublearns"><a onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ublearns.buffalo.edu/');return false;" target="_blank" href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ublearns.buffalo.edu/"><img src="https://myub.buffalo.edu/myub/images/rwd_icons/ublearns.png" alt=" "/>UBlearns</a></td>
+<td width="100" height="27" valign="bottom" class="myub_tab tab_ubbox"><a onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1');return false;');return false;" target="_blank" href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1');return false;"><img src="https://myub.buffalo.edu/myub/images/rwd_icons/ubbox.png" alt=" "/>UBbox</a></td>
+
+
+<td width="175" height="27" valign="bottom" class="myub_tab tab_hub_student"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER');return false;"><img src="https://myub.buffalo.edu/myub/images/rwd_icons/hub.png" alt=" "/><span class="hide_in_narrow">HUB Student Center</span><span class="hide_in_wide">HUB (Student)</span></a></td>
+
+
+<td class="spacer" width="*"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="15" height="27" alt="" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+<table class="tab_border_spacer" summary="format" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody>
+<tr>
+<td>
+</td>
+<td><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="465" height="1" alt="" /></td>
+</tr>
+</tbody>
+</table>
+<table class="change_bar" summary="format" border="0" width="100%" cellspacing="0" cellpadding="0" >
+<tbody>
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2">
+<img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="465" height="4" alt="" />
+</td>
+</tr>
+<tr>
+<td width="16"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="16" height="19" alt="" /></td>
+<td class="breadcrumb"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td align="right">
+<table summary="format" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+
+<td class="welcomemsgc"><img src="https://myub.buffalo.edu/myub/images/left_gray_curve.gif" alt="" /></td>
+<td bgcolor="#555555" class="changetextc" nowrap="nowrap"><span class="changetextf">Change:&nbsp;</span></td>
+<td bgcolor="#555555" class="contentlinksc" nowrap="nowrap" valign="middle"><span class="contentlinksf">&nbsp;&nbsp;<a href="https://myub.buffalo.edu/myub/pw/template/change_settings.html?referer=/myub/pw/template/myub.html?cid=1000">Settings</a></span></td>
+<td bgcolor="#555555" class="contentlinksc" valign="middle"><img src="https://myub.buffalo.edu/myub/images/right_gray_curve.gif" alt="" /></td>
+
+<td width="10"><img height="19" width="10" alt="" src="https://myub.buffalo.edu/myub/images/spacer.gif" /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+	    <tr>
+		<td class="content_f">
+
+<table summary="format" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" id="main">
+    <tr class="spacer">
+      <td width="150"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="150" height="1" alt="" /></td>
+      <td width="8"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="8" height="1" alt="" /></td>
+      <td width="36%"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="210" height="1" alt="" /></td>
+      <td width="8"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="8" height="1" alt="" /></td>
+      <td width="64%"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="376" height="1" alt="" /></td>
+    </tr>
+    <tr>
+    <td id="col1" class="dc" valign="top"><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+ 
+    <tbody>
+    <tr>
+    <td>
+  
+   
+     <div id="mobile_main_menu" class="mobile_menu">
+<div id="nav" class="mobile_menu_inner">
+<table summary="format" border="0" cellpadding="0" cellspacing="0" class="bbtc" width="100%">
+<tr class="hide_in_narrow"><td class="bl1c navheadsize" ><p class="l1f">Index</p></td></tr>
+  <tr><td class="bdc">
+ 
+  
+    <ul>
+    
+        
+		    <li class="bdhc currentpage navsize"><img src="https://myub.buffalo.edu/myub/images/myub_home.png"  alt="MyUB Home" border="0" />MyUB Home</li>
+        
+        
+        
+            <li class="hide_in_wide navsize"><a href="https://myub.buffalo.edu/myub/pw/template/myub.html?cid=9999"><img src="https://myub.buffalo.edu/myub/images/myub_home.png"  alt="MyPage" border="0" />MyPage</a></li>
+        
+    
+    </ul>
+  
+ 
+  
+   <div><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="bl2c"><p class="navsubhead navsubheadsize">About Me</p></td></tr></table></div>
+    <ul>
+    
+       
+	   	  
+	         <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1078"><img src="https://myub.buffalo.edu/myub/images/academics_finance.png"  alt="Academics/Finances" border="0" />Academics/Finances</a></li>
+	      
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://library.buffalo.edu/&amp;cid=1010&amp;rid=&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://library.buffalo.edu/&amp;cid=1010&amp;rid=&amp;ref=1');return false;"><img src="https://myub.buffalo.edu/myub/images/my_library.png"  alt="UB Libraries" border="0" />UB Libraries</a></li>
+                  
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.buffalo.edu/ubit.html&amp;cid=1003&amp;rid=&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.buffalo.edu/ubit.html&amp;cid=1003&amp;rid=&amp;ref=1');return false;"><img src="https://myub.buffalo.edu/myub/images/computing.png"  alt="Information Technology" border="0" />Information Technology</a></li>
+		  
+       
+    
+    </ul>
+  
+ 
+  
+   <div><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="bl2c"><p class="navsubhead navsubheadsize">Administrative</p></td></tr></table></div>
+    <ul>
+    
+       
+	   	  
+		     <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1077"><img src="https://myub.buffalo.edu/myub/images/research.png"  alt="Research" border="0" />Research</a></li>
+		  
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.buffalo.edu/ub2020/&amp;cid=1055&amp;rid=&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.buffalo.edu/ub2020/&amp;cid=1055&amp;rid=&amp;ref=1');return false;"><img src="https://myub.buffalo.edu/myub/images/ub_2020.png"  alt="UB 2020" border="0" />UB 2020</a></li>
+		  
+       
+    
+    </ul>
+  
+ 
+  
+   <div><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td class="bl2c"><p class="navsubhead navsubheadsize">UB Inside and Out</p></td></tr></table></div>
+    <ul>
+    
+       
+	   	  
+		     <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1037"><img src="https://myub.buffalo.edu/myub/images/events.png"  alt="Events" border="0" />Events@UB</a></li>
+		  
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1036"><img src="https://myub.buffalo.edu/myub/images/ubnews.png"  alt="UB News" border="0" />UB News</a></li>
+		  
+       
+    
+       
+	   	  
+             <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1017"><img src="https://myub.buffalo.edu/myub/images/academics.png"  alt="Image" border="0" />Campus Life</a></li>
+	      
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1061"><img src="https://myub.buffalo.edu/myub/images/health.png"  alt="Health & Safety" border="0" />Health &amp; Safety</a></li>
+		  
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="/myub/pw/template/myub.html?cid=1013"><img src="https://myub.buffalo.edu/myub/images/job_career.png"  alt="Job and Career" border="0" />Job &amp; Career</a></li>
+		  
+       
+    
+       
+	   	  
+		     <li class="navsize"><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.ubbulls.com/&amp;cid=1018&amp;rid=&amp;s=4e013590844da2aa&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.ubbulls.com/&amp;cid=1018&amp;rid=&amp;s=4e013590844da2aa&amp;ref=1');return false;"><img src="https://myub.buffalo.edu/myub/images/sportsandrec.png"  alt="Sports and Recreation" border="0" />Sports &amp; Recreation</a></li>
+		  
+       
+    
+    </ul>
+  
+ 
+ </td></tr>
+</table>
+</div>
+</div>
+<div id="mobile_search" class="mobile_menu"><div data-set="mobile-search" class="mobile_search_inner"></div></div>
+<div class="mobile_breadcrumb"><a href="/myub/pw/template/myub.html">MyUB</a> &raquo; Home</div>
+   
+  
+    </td>
+    </tr>   
+    <tr class="spacer"><td class="dc" valign="top"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="150" height="8" /></td></tr>
+    </tbody>
+ 
+    </table></td>
+    <td width="8"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="8" height="1" alt="" /></td>
+    <td id="col2" class="dc" valign="top"><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody data-set="top_channel" class="top_channel_top"></tbody>
+ 
+    <tbody>
+    <tr>
+    <td>
+  
+
+   
+     <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel cbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="cl1c">
+<p  class="l1f">HUB - Student Center</p>
+</td>
+<td class="cl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<style type="text/css">
+#myInfoSCIcon  {
+float:left;
+padding-right: 1em;
+}
+</style>
+<tr><td class="cdc">
+<p class="dlf" id="myInfoSCIcon">
+<a href="https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?PORTALPARAM_PTCNAV=HC_SSS_STUDENT_CENTER&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=CO_EMPLOYEE_SELF_SERVICE&EOPP.SCLabel=Self%20Service&EOPP.SCPTfname=CO_EMPLOYEE_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER&IsFolder=false">
+    <img alt="Student Center" src="https://myub.buffalo.edu/myub/images/student_center.png">
+  </a>
+</p>
+<p class="dlf">
+  Visit the <a href="https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?PORTALPARAM_PTCNAV=HC_SSS_STUDENT_CENTER&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=CO_EMPLOYEE_SELF_SERVICE&EOPP.SCLabel=Self%20Service&EOPP.SCPTfname=CO_EMPLOYEE_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER&IsFolder=false"><u>Student Center</u></a> for your Admission Application Status!
+  <br style="clear: both;">
+</p>
+</td></tr>
+</table>
+   
+
+  
+    </td>
+    </tr>
+    <tr class="spacer"><td class="dc" valign="top"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="210" height="8" /></td></tr>
+    </tbody>
+ 
+    <tbody>
+    <tr>
+    <td>
+  
+   <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel cbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="cl1c">
+<p  class="l1f">HUB</p>
+</td>
+<td class="cl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+  <tr><td class="cdc">
+ 
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www%2ebuffalo%2eedu%2fhub%2f&amp;cid=1000&amp;rid=010651" title="Help for using the HUB Student Center (tips and tutorials).">HUB information for students</a></p>
+   
+   
+  
+ 
+ </td></tr>
+</table>
+  
+    </td>
+    </tr>
+    <tr class="spacer"><td class="dc" valign="top"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="210" height="8" /></td></tr>
+    </tbody>
+ 
+    <tbody>
+    <tr>
+    <td>
+  
+
+   
+     <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel cbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="cl1c">
+<p  title="Latest student headlines from UB&#39;s community newspaper. RSS feed." class="l1f">UBNow - Latest Stories</p>
+</td>
+<td class="cl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td nowrap="nowrap" class="channel_more">
+<p class="l1arf">
+<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2frss%2fstudent%2ehtml&amp;cid=1000&amp;rid=013015">More</a>
+</p>
+</td><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+  <tr><td class="cdc">
+ 
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f11%2finternational%2dinclusion%2dreport%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="Everyone at UB must work to integrate students into the
+university community, according to the findings of a special task
+force.">Task force recommends ways to improve environment for international students</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f11%2fstudent%2delection%2danxiety%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="UB leaders, faculty and staff have responded to students worried
+about the outcome of the election and its effect on their
+lives.">Anxiety over election results prompts discussions across the university</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f11%2fskocpol%2dcritical%2dconversation%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="Theda Skocpol reflected on the election and the likely impact of
+a Donald Trump presidency as the keynote speaker at
+UB&#39;s&nbsp;&ldquo;Critical Conversations.&rdquo;&nbsp;">Acclaimed scholar sees lasting impact of a Trump presidency</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f11%2fdine%2dwith%2dfaculty%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="The new Dine with Faculty program encourages students and
+faculty to get to know each other in an informal setting over a
+meal.">Students and faculty meet for lunch, leave with greater sense of community</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f11%2fprofile%2dstutzman%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="UB head wrestling coach John Stutzman coaches Team USA in a
+competition in Russia with the wrestling world&rsquo;s best.
+&nbsp;">From Buffalo to Dagestan: UB&rsquo;s Stutzman and Team USA compete with wrestling&rsquo;s best </a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f10%2fstudent%2dinterest%2delection%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="For UB students&nbsp; voting in their first presidential
+election on Nov. 8, this year&#39;s polarizing campaign is triggering
+unexpected emotions.">Voting in first presidential election brings out mixed emotions in UB students</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f10%2fflu%2dsurvey%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="UB researchers will use the results to model how disease spreads
+through a community.">Smartphone survey to track flu in Western New York</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f10%2fsay%2dyes%2ddorm%2dkits%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="Some of the scholarship recipients received welcomed gear for
+their dorm rooms, thanks to a special donation program.">&lsquo;Say Yes&rsquo; scholars receive dorm survival kits</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f07%2fbarbarian%2dz%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="A new UB student club helps its members be their best selves
+&mdash; inside and out.">Club helps members be their best selves &mdash; inside and out</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fubnow%2fcampus%2ehost%2ehtml%2fcontent%2fshared%2funiversity%2fnews%2fub%2dreporter%2darticles%2fstories%2f2016%2f07%2fread%2dptsd%2dfreshmen%2edetail%2ehtml&amp;cid=1000&amp;rid=013015" title="A UB study found most first-year college students see their
+symptoms moderate but alcohol use can affect their
+improvement.">Students&rsquo; PTSD symptoms fluctuate greatly during first year of college</a></p>
+   
+   
+  
+ 
+ </td></tr>
+</table>
+   
+
+  
+    </td>
+    </tr>
+    <tr class="spacer"><td class="dc" valign="top"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="210" height="8" /></td></tr>
+    </tbody>
+ 
+    <tbody>
+    <tr>
+    <td>
+  
+
+   
+     <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel cbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="cl1c">
+<p  title="See more UB events" class="l1f">UB Events - Featured Events</p>
+</td>
+<td class="cl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td nowrap="nowrap" class="channel_more">
+<p class="l1arf">
+<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2ffeatured_events%2f&amp;cid=1000&amp;rid=005646">More</a>
+</p>
+</td><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+  <tr><td class="cdc">
+
+
+ 
+ 
+   
+     <table summary="format" cellpadding="0" cellspacing="0" border="0" width="100%">
+     <tr>
+    
+      <td class="sm events">
+     
+	 <div id="event_picture">
+     <a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fcalendar%2fcalendar%3faction%3ddescribe%26which%3dD2D86D26%2dD67A%2d11E6%2dB8D7%2d9C1A997BBC6E%26lastaction%3dsearch%26category%3d%26time%3d%26thismonth%3d%26from%3d02%252F02%252F2017%26until%3d&amp;cid=1000&amp;rid=005646"><img src="https://www.buffalo.edu/featured_events/photos/grandcanyon.jpg" width="194" height="80" alt="" /></a>
+	 </div>
+      <p >
+      <b>Learn travel tips and tricks to explore the U.S.</b> <span class = "date">02/09</span>  | <a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http%3a%2f%2fwww%2ebuffalo%2eedu%2fcalendar%2fcalendar%3faction%3ddescribe%26which%3dD2D86D26%2dD67A%2d11E6%2dB8D7%2d9C1A997BBC6E%26lastaction%3dsearch%26category%3d%26time%3d%26thismonth%3d%26from%3d02%252F02%252F2017%26until%3d&amp;cid=1000&amp;rid=005646">Details</a>
+      </p>
+      </td>
+      </tr>
+      </table>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ </td></tr>
+</table>
+   
+
+  
+    </td>
+    </tr>
+    <tr class="spacer"><td class="dc" valign="top"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="210" height="8" /></td></tr>
+    </tbody>
+ 
+    </table></td>
+    <td width="8"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" width="8" height="1" alt="" /></td>
+    <td id="col3" class="dc" valign="top"><table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+ 
+ 
+  
+
+   
+     
+     
+ 
+   
+  
+ 
+  
+
+   
+     
+     
+      <tbody data-set="top_channel" data-weight="100" class="top_channel">
+      <tr>
+      <td>
+        <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel ntk-channel bbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="ntk-channel bl1c">
+<p  title="Important updates and deadlines and other critical university messages." class="l1f">Need to Know</p>
+</td>
+<td class="ntk-channel bl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+  <tr><td class="bdc">
+
+
+ 
+    <p class="dlf" style="margin-left: 27px; text-indent: -20px;"><span class="bdhc">&raquo;&nbsp;</span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://registrar%2ebuffalo%2eedu%2fdegrees%2findex%2ephp&amp;cid=1000&amp;rid=013662">Expecting to graduate June 1st?  The deadline to apply is February 22nd at 11:59 pm!</a></p>
+ 
+    <p class="dlf" style="margin-left: 27px; text-indent: -20px;"><span class="bdhc">&raquo;&nbsp;</span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://undergrad%2dcatalog%2ebuffalo%2eedu%2fpolicies%2fregistration%2fadd%2ddrop%2dresign%2ehtml&amp;cid=1000&amp;rid=013663">The course "Resign" period begins today and extends through 4/21. Be sure to speak with an advisor BEFORE resigning from a course.</a></p>
+ 
+    <p class="dlf" style="margin-left: 27px; text-indent: -20px;"><span class="bdhc">&raquo;&nbsp;</span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://studentaccounts%2ebuffalo%2eedu%2ftaxreliefact%2findex%2ephp&amp;cid=1000&amp;rid=013664">Expecting to receive a 1098-T statement? They have been mailed to your permanent address on record.</a></p>
+ 
+    <p class="dlf" style="margin-left: 27px; text-indent: -20px;"><span class="bdhc">&raquo;&nbsp;</span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://studentaccounts%2ebuffalo%2eedu%2fbilling%2fspringbillingdates%2ephp&amp;cid=1000&amp;rid=013665">The second Spring eBill notification will be sent to your UB email on February 13th, the due date is March 15th (if you are not in the payment plan).</a></p>
+ 
+    <p class="dlf" style="margin-left: 27px; text-indent: -20px;"><span class="bdhc">&raquo;&nbsp;</span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www%2ebuffalo%2eedu%2fubnow%2fbriefs%2f2017%2f02%2fassault%2dclaim%2ehtml&amp;cid=1000&amp;rid=013677">On-campus alleged assault/attempted sexual abuse claim was false, investigators conclude</a></p>
+ 
+
+
+
+ </td></tr>
+</table>
+      </td>
+      </tr>   
+      <tr class="spacer"><td class="dc"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="376" height="8" /></td></tr>
+      </tbody>
+      
+     
+ 
+   
+  
+ 
+  
+    <tbody>
+    <tr>
+    <td>
+   <table summary="format" border="0" cellpadding="0" cellspacing="0" class="channel cbtc" width="100%">
+<tr>
+<td>
+<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="cl1c">
+<p  title="MyUB&#39;s general bulletin board -- check for announcements, events, contests, &amp; more." class="l1f">General Announcements</p>
+</td>
+<td class="cl1c">
+<table class="channel_controls" summary="format" align="right" border="0" cellpadding="0" cellspacing="0">
+<tr><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+  <tr><td class="cdc">
+ 
+ 
+  
+  
+   
+    <table summary="format" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+    <td valign="top" width="50%" class="multicol">
+    
+    
+        
+    
+        
+    
+        
+    
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www%2ebuffalo%2eedu%2fubit%2fsurvey&amp;cid=1000&amp;rid=013535">Win up to $75 in Amazon gift cards. Tell us about the technology you use!</a></p>
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www%2ebuffalo%2eedu%2fubit%2fnews%2farticle%2ehost%2ehtml%2fcontent%2fshared%2fwww%2fubit%2fnews%2f2016%2fubbox%2dlogin%2edetail%2ehtml&amp;cid=1000&amp;rid=013615">UBbox has a new official login page</a></p>
+   
+   </td><td valign="top" width="50%" class="multicol">
+   
+   
+  
+ 
+  
+  
+   
+   
+    <p class="dlf"><span class="cbc"><span class="bulletf">o&nbsp;&nbsp;</span></span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www%2ecas%2ebuffalo%2eedu%2fgraduate%2fprospective%2dgraduate%2fcollege%2dof%2darts%2dsciences%2dgraduate%2drecruitment%2devents%2f&amp;cid=1000&amp;rid=013674">Questions about applying to Graduate School in the College of Arts and Sciences? Attend Drop In Hours!</a></p>
+   
+   
+    </td>
+    </tr>
+    </table>
+   
+  
+ 
+ </td></tr>
+</table>
+    </td>
+    </tr>   
+    <tr class="spacer"><td class="dc"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="376" height="8" /></td></tr>
+    </tbody>
+    
+  
+ 
+    </table></td>
+    </tr>
+</table>
+
+		</td>
+	    </tr>
+        <script type="text/javascript">
+            $('.l1f:contains("General Announcements")')
+                .closest('tbody').parent().closest('tbody').parent().closest('tbody')
+                .attr('data-set', 'top_channel')
+                .attr('data-weight', '200')
+                .addClass('top_channel');
+
+            $('.l1f:contains("Need to Know")')
+                .closest('tbody').parent().closest('tbody').parent().closest('tbody')
+                .attr('data-set', 'top_channel')
+                .attr('data-weight', '150')
+                .addClass('top_channel');
+
+            $('.l1f:contains("Campus Alerts")')
+                .closest('tbody').parent().closest('tbody').parent().closest('tbody')
+                .attr('data-set', 'top_channel')
+                .attr('data-weight', '0')
+                .addClass('top_channel');
+
+            if ($('.myub_tab:not(.spacer)').length == 0) $('.mobile_menu_button,.mobile_menu').hide();
+        </script>
+	    <tr class="footer_spacer">
+		<td><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="1" height="20" /></td>
+	    </tr>
+	    <tr class="footer_spacer">
+		<td class="copyright_line_c"><img src="https://myub.buffalo.edu/myub/images/spacer.gif" alt="" width="100%" height="1" /></td>
+	    </tr>
+	    <tr id="footer">
+		<td>
+		<table summary="format" border="0" cellpadding="0" cellspacing="0" width="100%" >
+		<tr>
+		<td class="copyright_c hide_in_narrow">
+		<p class="footer_f">
+		
+		<a href="https://myub.buffalo.edu/myub/pw/template/myub.html?cid=1000">MyUB</a>&nbsp;|
+		<a href="https://myub.buffalo.edu/myub/pw/template/myub.html?cid=9999">MyPage</a>&nbsp;|
+		<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ubmail.buffalo.edu" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ubmail.buffalo.edu');return false;">UBmail</a>&nbsp;|
+		<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ublearns.buffalo.edu/" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://ublearns.buffalo.edu/');return false;">UBlearns</a>&nbsp;|
+		<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1');return false;" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://sso.services.box.net/sp/startSSO.ping%3FPartnerIdpId%3Durn%3Amace%3Aincommon%3Abuffalo.edu%26TargetResource%3Dhttps%3A%2F%2Fbuffalo.box.com%2Fsso%2Fping_federate&amp;cid=1000&amp;rid=&amp;s=5afa725ff76f5bb7&amp;ref=1');return false;');return false;">UBbox</a>&nbsp;|
+		
+		
+		&nbsp;<a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER" target="_blank" onclick="remote_window('https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://www.ss.hub.buffalo.edu/psp/csprdss/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HC_SSS_STUDENT_CENTER');return false;">HUB Student Center</a>
+		
+		
+		</p>
+		</td>
+		<td class="copyright_c">
+		<p class="copyright_f">
+        <span class="full_site"><a href="javascript:$.cookie('force_no_mobile', 1, { path: '/' });window.location.reload(true);">Full Site</a> | </span><a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=https://myub.buffalo.edu/acsgen_web/pw/scripts/acs_logoff.cgi?application=MyUB&amp;cid=1000&amp;rid=">Logout</a> | <a href="/myub/pw/template/myub.html?cid=1032">Help</a> | <a href="/myub/pw/template/myub.html?cid=1032">Feedback</a> | <a href="https://myub.buffalo.edu/myub/pw/scripts/travel/travel.pl?url=http://www.buffalo.edu/ubit/policies/it-policies-a-to-z/privacy.html&amp;cid=1000&amp;rid=">Privacy Policy</a><span class="last_copyright_divider"> | </span><span class="last_copyright">&copy; 2017 University at Buffalo, all rights reserved.</span>
+		</p>
+		</td>
+		</tr>
+		</table>
+		</td>
+	    </tr>
+	    </tbody>
+	</table>
+    </body>
+    
+</html>¡qÀOÿ      Xœ‘–Xœ‘ž=k¾­       4    :https://myub.buffalo.edu/myub/pw/template/myub.html necko:classified 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Thu, 09 Feb 2017 15:58:14 GMT
+Server: Apache
+Cache-Control: private
+Content-Type: text/html
+Via: 1.1 myub.buffalo.edu
+ charset windows-1252 uncompressed-len 0 predictor::resource-count 41 predictor::https://myub.buffalo.edu/myub/css/nav.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/css/header.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/css/application.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/css/myub1.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/css/myub_size_M.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/css/myub_rwd.css 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/javascript/jquery.min.js 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/javascript/appendAround.js 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/javascript/main.js 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/javascript/ga.js 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/spacer.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/ub_single_line.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/MyUB_Logo_New_Grey.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/rwd_icons/mail.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/rwd_icons/ublearns.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/rwd_icons/ubbox.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/rwd_icons/hub.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/left_gray_curve.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/right_gray_curve.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/myub_home.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/academics_finance.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/my_library.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/computing.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/research.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/ub_2020.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/events.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/ubnews.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/academics.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/health.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/job_career.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/sportsandrec.png 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/student_center.png 1,1,1486655894,0 predictor::https://www.buffalo.edu/featured_events/photos/grandcanyon.jpg 1,1,1486655894,0 predictor::https://www.google-analytics.com/analytics.js 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/search_icon.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/UB_Bar_Background.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/active_tab.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/images/event_background.gif 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/fonts/DINWeb.woff 1,1,1486655894,0 predictor::https://myub.buffalo.edu/myub/fonts/consolas-webfont.woff 1,1,1486655894,0 predictor::https://www.google-analytics.com/r/collect?v=1&_v=j47&aip=1&a=1203298993&t=pageview&_s=1&dl=https%3A%2F%2Fmyub.buffalo.edu%2Fmyub%2Fpw%2Ftemplate%2Fmyub.html&dr=https%3A%2F%2Fshibboleth.buffalo.edu%2Fidp%2Fprofile%2FSAML2%2FRedirect%2FSSO&ul=en-us&de=windows-1252&dt=MyUB%20Home&sd=24-bit&sr=1280x1024&vp=945x638&je=0&fl=11.2%20r202&_u=QEAAAQABI~&jid=2014202944&cid=476546746.1486655895&tid=UA-44565048-1&_r=1&cd1=Applicant%2C%20Student&z=1976781259 1,1,1486655894,0   ­‹

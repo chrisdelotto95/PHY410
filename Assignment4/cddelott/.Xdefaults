@@ -1,0 +1,59 @@
+!
+! Generic Color Support:
+!
+#ifdef COLOR
+*customization: -color
+#endif /* COLOR */
+!
+XTerm*font:	*courier-bold-r-normal--14-140-*
+XTerm*jumpScroll:	on
+XTerm*visualBell:	on
+XTerm*scrollBar:	on
+XTerm*scrollKey:	on
+XTerm*saveLines:	128
+selection.timeout:	10
+emacs*font:	*courier-bold-r-normal--14-140-*
+emacs*geometry:	80x40
+xbiff*geometry:	50x50-30+0
+Scrollbar.JumpCursor:	True
+xload*background:	yellow
+xload*foreground:	blue
+xload*geometry:	160x90
+xload*highlight:	pink
+xload*update:	2
+OpenWindows.WindowColor:	#5b7ee5
+OpenWindows.DragRightDistance:	100
+OpenWindows.WorkspaceColor:	#4c4c4c
+OpenWindows.MultiClickTimeout:	4
+OpenWindows.IconLocation:	bottom
+OpenWindows.Beep:	always
+OpenWindows.SetInput:	followmouse
+OpenWindows.ScrollbarPlacement:	right
+OpenWindows.PopupJumpCursor:	True
+OpenWindows.SelectDisplaysMenu:	False
+OpenWindows.IconFont:	9x15
+Maker.olwmClickType: False
+Maker*FocusOnMouse:True
+*basicLocale:	C
+*displayLang:	C
+*inputLang:	C
+*numeric:	C
+*timeFormat:	C
+Scrollbar.JumpCursor:   True
+OpenWindows.MultiClickTimeout:  5
+OpenWindows.SetInput:   followmouse
+OpenWindows.ScrollbarPlacement: right
+OpenWindows.PopupJumpCursor:    True
+OpenWindows.WorkspaceColor:     #89e5e5
+OpenWindows.IconLocation:       bottom
+OpenWindows.SelectDisplaysMenu: False
+OpenWindows.WindowColor:        #b0c4de
+OpenWindows.DragRightDistance:  50
+OpenWindows.autoRaise:  false
+*basicLocale:   C
+*displayLang:   C
+*inputLang:     C
+*numeric:       C
+*timeFormat:    C
+Mwm*keyboardFocusPolicy:        pointer
+Mwm*useIconBox: True

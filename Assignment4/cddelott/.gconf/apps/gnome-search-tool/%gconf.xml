@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default_window_maximized" mtime="1488665193" type="bool" value="false"/>
+	<entry name="default_window_height" mtime="1488665193" type="int" value="657"/>
+	<entry name="default_window_width" mtime="1488665193" type="int" value="913"/>
+	<entry name="look_in_folder" mtime="1488665140" type="string">
+		<stringvalue>/nsm/home/cddelott</stringvalue>
+	</entry>
+</gconf>

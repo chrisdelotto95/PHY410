@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="nautilus-window-scroll-position" mtime="1492807897" type="string">
+		<stringvalue>file:///nsm/home/cddelott/Desktop/Homework%203-(Problem%201%20&amp;%202)%20.odt</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-view-layout-timestamp" mtime="1492804827" type="string">
+		<stringvalue>1492804827</stringvalue>
+	</entry>
+	<entry name="nautilus-icon-view-keep-aligned" mtime="1492804827" type="string">
+		<stringvalue>true</stringvalue>
+	</entry>
+</gconf>

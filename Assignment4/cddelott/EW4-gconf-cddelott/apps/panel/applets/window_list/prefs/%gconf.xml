@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="grouping_sort_policy" mtime="1486655776" schema="/schemas/apps/window_list_applet/prefs/grouping_sort_policy"/>
+</gconf>

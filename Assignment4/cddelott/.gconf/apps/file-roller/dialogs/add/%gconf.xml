@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="filename" mtime="1486844733" type="string">
+		<stringvalue>file:///nsm/home/cddelott/working/hello-world/README.md</stringvalue>
+	</entry>
+	<entry name="current_folder" mtime="1486844733" type="string">
+		<stringvalue>file:///nsm/home/cddelott/working/hello-world</stringvalue>
+	</entry>
+</gconf>

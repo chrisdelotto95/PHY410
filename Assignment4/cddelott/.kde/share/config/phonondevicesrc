@@ -1,0 +1,42 @@
+[AudioDevice_Default_capture]
+cardName=Default
+deleted=false
+deviceNumber=-1
+hotpluggable=false
+iconName=audio-card
+index=-3
+initialPreference=30
+isAdvanced=false
+
+[AudioDevice_Default_playback]
+cardName=Default
+deleted=false
+deviceNumber=-1
+hotpluggable=false
+iconName=audio-card
+index=-1
+initialPreference=30
+isAdvanced=false
+
+[AudioDevice_HDA Intel, AD1984A Analog\nDefault Audio Device_capture]
+cardName=HDA Intel, AD1984A Analog (Default Audio Device)
+deleted=false
+deviceNumber=-1
+hotpluggable=false
+iconName=audio-card
+index=-4
+initialPreference=30
+isAdvanced=false
+
+[AudioDevice_HDA Intel, AD1984A Analog\nDefault Audio Device_playback]
+cardName=HDA Intel, AD1984A Analog (Default Audio Device)
+deleted=false
+deviceNumber=-1
+hotpluggable=false
+iconName=audio-card
+index=-2
+initialPreference=30
+isAdvanced=false
+
+[Globals]
+nextIndex=5

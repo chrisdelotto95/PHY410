@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="download_next_time" mtime="1488668836" type="int" value="1488672436"/>
+	<entry name="paned_position" mtime="1488665235" type="int" value="80"/>
+</gconf>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sources" mtime="1486835468" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;group uid=&quot;1486835468.24164.12@banquo.public.buffalo.edu&quot; name=&quot;On This Computer&quot; base_uri=&quot;local:&quot; readonly=&quot;no&quot;&gt;&lt;source uid=&quot;1486835468.24164.14@banquo.public.buffalo.edu&quot; name=&quot;Personal&quot; relative_uri=&quot;system&quot;&gt;&lt;properties&gt;&lt;property name=&quot;completion&quot; value=&quot;true&quot;/&gt;&lt;/properties&gt;&lt;/source&gt;&lt;/group&gt;
+</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;group uid=&quot;1486835468.24164.13@banquo.public.buffalo.edu&quot; name=&quot;On LDAP Servers&quot; base_uri=&quot;ldap://&quot; readonly=&quot;no&quot;/&gt;
+</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;group uid=&quot;1486835468.24164.18@banquo.public.buffalo.edu&quot; name=&quot;WebDAV&quot; base_uri=&quot;webdav://&quot; readonly=&quot;no&quot;/&gt;
+</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;group uid=&quot;1486835468.24164.20@banquo.public.buffalo.edu&quot; name=&quot;Google&quot; base_uri=&quot;google://&quot; readonly=&quot;no&quot;/&gt;
+</stringvalue>
+		</li>
+	</entry>
+</gconf>

@@ -1,0 +1,97 @@
+Already backup up 
+                      WELCOME To The UBiquity
+                  Distributed Computing Environment
+
+---------------------------  Node News -------------------------------
+Type 'motd' to see this message again.
+
+Please check the SENS home page, "http://www.sens.buffalo.edu/", on a
+regular basis. Useful Information can be found there regarding system
+updates, computer policies (no screen locks, no remote logins to lab
+systems, etc.), software (use of "use", "use update", and so on), and
+available system resources.  Type "firefox" to start a web browser so
+you can access this site.
+----------------------------------------------------------------------
+PLEASE DO NOT run more than 1 CPU intensive process on Node timeshares.
+If you need more resources for the work you are doing, please e-mail
+to senshelp@buffalo.edu. We appreciate your understanding and
+cooperation in this matter.
+======================================================================
+
+For the latest SENS news and updates, please go to the SENS home page
+at http://www.sens.buffalo.edu/ using your favorite web browser.
+
+======================================================================
+
+stty: standard input: Inappropriate ioctl for device
+GNOME_KEYRING_SOCKET=/tmp/keyring-d3vraM/socket
+SSH_AUTH_SOCK=/tmp/keyring-d3vraM/socket.ssh
+Cleaned 1 files 9 still live
+
+(process:27531): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+
+(process:27531): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+
+(process:27531): GLib-WARNING **: goption.c:2132: ignoring no-arg, optional-arg or filename flags (8) on option of type 0
+Unable to open desktop file /sens/share/applications/oowriter.desktop for panel launcher: No such file or directory
+
+(krb5-auth-dialog:27532): GLib-GObject-CRITICAL **: Object class GtkSecureEntry doesn't implement property 'editing-canceled' from interface 'GtkCellEditable'
+** Message: adding killswitch idx 1 state KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitch 1 is KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitches state KILLSWITCH_STATE_UNBLOCKED
+
+(polkit-gnome-authentication-agent-1:27550): GLib-GObject-WARNING **: cannot register existing type `_PolkitError'
+
+(polkit-gnome-authentication-agent-1:27550): GLib-CRITICAL **: g_once_init_leave: assertion `initialization_value != 0' failed
+Unable to open desktop file /sens/share/applications/ooimpress.desktop for panel launcher: No such file or directory
+Unable to open desktop file /sens/share/applications/oocalc.desktop for panel launcher: No such file or directory
+
+(bluetooth-applet:27545): GLib-GObject-WARNING **: invalid cast from `GtkAction' to `GtkActionGroup'
+** Message: killswitch 1 is KILLSWITCH_STATE_UNBLOCKED
+** Message: killswitches state KILLSWITCH_STATE_UNBLOCKED
+Failed to play sound: File or data not found
+** Message: applet now removed from the notification area
+Initializing nautilus-open-terminal extension
+Initializing nautilus-gdu extension
+** Message: applet now embedded in the notification area
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+kbuildsycoca4 running...
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+Connecting to deprecated signal QDBusConnectionInterface::serviceOwnerChanged(QString,QString,QString)
+Window manager warning: Received a _NET_WM_MOVERESIZE message for 0x4400001 (Upload Ass); these messages lack timestamps and therefore suck.
+
+(gnome-power-manager:27551): GLib-GObject-CRITICAL **: g_object_unref: assertion `G_IS_OBJECT (object)' failed
+** Message: applet now removed from the notification area
+Shutting down nautilus-gdu extension
+Shutting down nautilus-open-terminal extension
+
+--- Hash table keys for warning below:
+--> Christopher D Delotto
+--> inode/directory
+--> phydue
+--> l79
+--> cddelott
+
+(nautilus:27507): Eel-WARNING **: "unique eel_ref_str" hash table still has 5 elements at quit time (keys above)
+
+(nautilus:27507): Eel-WARNING **: "nautilus-directory.c: directories" hash table still has 3 elements at quit time
+
+(polkit-gnome-authentication-agent-1:27550): polkit-gnome-1-WARNING **: Error enumerating temporary authorizations: Remote Exception invoking org.freedesktop.PolicyKit1.Authority.EnumerateTemporaryAuthorizations() on /org/freedesktop/PolicyKit1/Authority at name org.freedesktop.PolicyKit1: org.freedesktop.PolicyKit1.Error.Failed: Cannot determine session the caller is in
+gnome-settings-daemon: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+gpk-update-icon: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+abrt-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+gnome-screensaver: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+gdu-notification-daemon: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+krb5-auth-dialog: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+evolution-alarm-notify: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+bluetooth-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+nm-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+gnome-volume-control-applet: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+polkit-gnome-authentication-agent-1: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+applet.py: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.
+kdeinit4: Fatal IO error: client killed
+<unknown>: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.0.
+<unknown>: Fatal IO error 11 (Resource temporarily unavailable) on X server :0.0.
+klauncher: Exiting on signal 15
+XIO:  fatal IO error 4 (Interrupted system call) on X server ":0.0"
+      after 21 requests (21 known processed) with 0 events remaining.

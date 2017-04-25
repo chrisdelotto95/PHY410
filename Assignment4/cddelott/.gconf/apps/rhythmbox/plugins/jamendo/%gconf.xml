@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sorting" mtime="1488668925" type="string">
+		<stringvalue>,ascending</stringvalue>
+	</entry>
+	<entry name="paned_position" mtime="1488665235" type="int" value="180"/>
+	<entry name="active" mtime="1488665235" type="bool" value="true"/>
+</gconf>

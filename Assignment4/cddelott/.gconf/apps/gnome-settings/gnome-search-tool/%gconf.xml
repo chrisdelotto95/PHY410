@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="history-gsearchtool-file-entry" mtime="1488665167" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>volume</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>setting</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>settings</stringvalue>
+		</li>
+	</entry>
+</gconf>

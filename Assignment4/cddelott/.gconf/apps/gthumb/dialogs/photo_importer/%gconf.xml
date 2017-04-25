@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="port" mtime="1488324315" type="string">
+		<stringvalue>usb:</stringvalue>
+	</entry>
+	<entry name="model" mtime="1488324315" type="string">
+		<stringvalue>MTP Device</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,10 @@
+[GENERAL]
+delay=0
+filename[$e]=file://$HOME/Desktop/need%20help1.png
+includeDecorations=true
+mode=0
+
+[KFileDialog Settings]
+Height 1024=450
+Recent Files[$e]=$HOME/Desktop/need help.png,$HOME/Desktop/need help.png
+Width 1280=700
